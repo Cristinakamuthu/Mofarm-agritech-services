@@ -171,5 +171,57 @@ nav#link a {
 .menu.active #items li {
   opacity: 1;
 }
+/* Contact Section */
+.contact {
+  background: #FFE4E1; /* light pink background */
+  padding: 50px 20px;
+  border: 2px solid #2E6F40; /* dark green border */
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: #2E6F40;
+  margin-bottom: 20px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: #2E6F40;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px 18px;
+  border: 2px solid #2E6F40;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.contact-links a:hover {
+  background: #2E6F40;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .contact-links a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 
 
