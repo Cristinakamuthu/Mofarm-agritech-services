@@ -1,192 +1,163 @@
-*{
-    margin: 0;
-	padding: 0;
-	box-sizing: border-box;
- 
-
-    a {
-		text-decoration: none;
-	}
-	
-	li {
-		list-style: none;
-	}
-
+/* 🌿 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#mofarm-header{
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 60px;
-    font-weight: 700;
-    color: white;
-    background-color: #2E6F40;
-    padding: 20px;
-    margin: 0;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
 }
-/* #mofarm-header {
+
+/* 🌿 Header */
+#mofarm-header {
   background: #2E6F40;
-  color: white;
-  padding: 15px;
-  font-size: 24px;
-} */
-#link{
-    display: flex;
-    align-items: center;
-    gap: 150px;
-    justify-content: center;
-    padding-top: 25px;
-    font-size: 25px;
-    font-weight: 900;
+  color: #fff;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-a {
-  color: #2E6F40; 
+/* 🌿 Navigation */
+#link {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 20px;
+  background: #fff;
+  border-bottom: 2px solid #2E6F40;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#link a {
+  color: #2E6F40;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 1.1rem;
   position: relative;
+  transition: color 0.3s ease;
 }
 
-a::after {
+#link a::after {
   content: "";
   position: absolute;
+  bottom: -4px;
+  left: 0;
   width: 0;
   height: 2px;
-  left: 0;
-  bottom: -2px;
- background-color: #000;
+  background: #2E6F40;
   transition: width 0.3s ease;
 }
 
-a:hover::after {
+#link a:hover {
+  color: orange;
+}
+
+#link a:hover::after {
   width: 100%;
 }
 
-
-a:active {
-  color: #1e4f2c;
-  transform: scale(0.97);
-  font-weight: 700px;
-}
-
-
-a:visited {
-  color: #5a8f6a;
-}
-.background{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsCEqy7gw2yl_OHU7TRKggg0JSPoeO7fksTw&s);
-    background-repeat: no-repeat;  
-    background-size: cover;       
-    background-position: center;  
-    background-attachment: fixed; 
-}
-#paragraph{
-    color:white;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    padding-top: 300px;
-    padding-left: 300px;
-    padding-right: 300px;
-    padding-bottom: 100px;
-}
-/* body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+/* 🌿 Hero Section */
+.background {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsCEqy7gw2yl_OHU7TRKggg0JSPoeO7fksTw&s")
+              no-repeat center center/cover;
+  background-attachment: fixed;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
   text-align: center;
-  margin: 0;
-  padding: 0;
-} */
-
-
-
-nav#link {
-  margin: 15px;
 }
 
-nav#link a {
-  text-decoration: none;
-  margin: 0 15px;
-  color: #2E6F40;
-  font-weight: bold;
+#paragraph {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  max-width: 800px;
+  background: rgba(46, 111, 64, 0.7);
+  padding: 25px 30px;
+  border-radius: 12px;
+  line-height: 1.4;
 }
 
+/* 🌿 About Section (Menu) */
 .menu {
-  position: relative;
-  margin-top: 80px;
-  padding-top: 150px;
-  background-color: #5a8f6a;
-  margin: 40px auto;
-  padding: 40px 0;
-
+  background: #f4fdf6;
+  padding: 80px 20px;
+  text-align: center;
+  border-top: 2px solid #2E6F40;
+  height: 100vh;
 }
 
 #toggle {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: none;
+  /* background: #2E6F40; */
   background: orange;
-  color: white;
-  font-size: 14px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  z-index: 2;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease;
+}
+
+#toggle:hover {
+  transform: scale(1.1);
 }
 
 #items {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* transform: translate(-50%, -50%); */
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
 }
 
 #items li {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background: #2E6F40;
-  color: white;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
-  opacity: 0;
-  transition: all 0.5s ease;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  padding: 10px;
   text-align: center;
-  padding: 10px;      
-  border-radius: 50%; 
-  font-size: 12px;   
-  line-height: 1.2;   
   opacity: 0;
   transition: all 0.5s ease;
 }
-
 
 .menu.active #items li {
   opacity: 1;
 }
-/* Contact Section */
+
+/* 🌿 Contact Section */
 .contact {
-  background: #FFE4E1; /* light pink background */
-  padding: 50px 20px;
-  border: 2px solid #2E6F40; /* dark green border */
-  border-radius: 12px;
-  max-width: 700px;
-  margin: 40px auto;
+  /* background: #FFE4E1;*/
+  background: #2E6F40;
+
+  padding: 60px 20px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-top: 2px solid #2E6F40;
 }
 
 .contact h2 {
   font-size: 2rem;
-  color: #2E6F40;
-  margin-bottom: 20px;
+  color: #fff;
+  margin-bottom: 25px;
 }
 
 .contact-links {
@@ -197,6 +168,7 @@ nav#link a {
 }
 
 .contact-links a {
+  display: inline-block;
   text-decoration: none;
   color: #2E6F40;
   font-size: 1.1rem;
@@ -204,24 +176,43 @@ nav#link a {
   padding: 12px 18px;
   border: 2px solid #2E6F40;
   border-radius: 8px;
-  transition: all 0.3s ease;
   background: #fff;
+  transition: all 0.3s ease;
 }
 
 .contact-links a:hover {
   background: #2E6F40;
   color: #fff;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
-/* Mobile Responsive */
-@media (max-width: 600px) {
+
+@media (max-width: 768px) {
+  #mofarm-header {
+    font-size: 2rem;
+    padding: 20px;
+  }
+
+  #link {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  #paragraph {
+    font-size: 1.3rem;
+    padding: 15px;
+  }
+
+  #items li {
+    width: 90px;
+    height: 90px;
+    font-size: 0.8rem;
+  }
+
   .contact-links a {
     width: 100%;
     text-align: center;
   }
 }
-
-
-

@@ -7,16 +7,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header id="mofarm-header">Mofarm Agritech services</header>
+  <header id="mofarm-header">
+    <h1>Mofarm Agritech Services</h1>
+  </header>
 
   <div id="Home" class="background">
     <nav id="link">
       <a href="#Home">Home</a>
       <a href="#About">About</a>
-      <a href="#Contactus">Contact us</a>
+      <a href="#Contactus">Contact Us</a>
     </nav>
 
-    <p id="paragraph">“ We deliver reliable solutions tailored to your needs — because your success is our priority.”</p>
+    <p id="paragraph">“We deliver reliable solutions tailored to your needs — because your success is our priority.”</p>
   </div>
 
   <div id="About" class="menu">
@@ -31,6 +33,14 @@
     </ul>
   </div>
 
+  <div id="Contactus" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-links">
+      <a href="mailto:Paulkamuthu@gmail.com">📧 Email: Paulkamuthu@gmail.com</a>
+      <a href="tel:+254722865854">📞 Call: +254 722 865 854</a>
+    </div>
+  </div>
+
   <script>
     const toggle = document.getElementById("toggle");
     const menu = document.querySelector(".menu");
@@ -39,11 +49,11 @@
     toggle.addEventListener("click", () => {
       menu.classList.toggle("active");
 
-      const radius = 200; // how far the items spread
+      const radius = 200; 
       const total = items.length;
 
       items.forEach((item, index) => {
-        const angle = (index / total) * (2 * Math.PI); // radians
+        const angle = (index / total) * (2 * Math.PI);
         const x = radius * Math.cos(angle);
         const y = radius * Math.sin(angle);
 
@@ -55,14 +65,5 @@
       });
     });
   </script>
-  <div id="#Contactus" class="contact">
-     <h2>Contact Us</h2>
-    <div class="contact-links">
-      <a href="Paulkamuthu@gmail.com">📧 Email  @Paulkamuthu@gmail.com</a>
-      <a href="tel:+254722865854">📞 Call Us @tel:+254722865854" </a>
-     
-    </div>
-
-  </div>
 </body>
 </html>
