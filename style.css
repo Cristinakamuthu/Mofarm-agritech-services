@@ -2,6 +2,7 @@
     margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+ 
 
     a {
 		text-decoration: none;
@@ -67,4 +68,21 @@ a:active {
 a:visited {
   color: #5a8f6a;
 }
-
+.background{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsCEqy7gw2yl_OHU7TRKggg0JSPoeO7fksTw&s);
+    background-repeat: no-repeat;  
+    background-size: cover;       
+    background-position: center;  
+    background-attachment: fixed; 
+}
+#paragraph{
+    color:white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top: 300px;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-bottom: 100px;
+    /* justify-content: center; */
+}
