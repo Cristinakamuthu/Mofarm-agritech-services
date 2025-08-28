@@ -1,23 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mofarm</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mofarm</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="mofarm-header">Mofarm Agritech services</header>
-    <div id="#Home" class="background">
+  <header id="mofarm-header">Mofarm Agritech services</header>
+
+  <div id="Home" class="background">
     <nav id="link">
-        <a href="#Home">Home</a>
-        <a href="#About">About</a>
-        <a href="#Contactus">Contact us</a>
-</nav>
+      <a href="#Home">Home</a>
+      <a href="#About">About</a>
+      <a href="#Contactus">Contact us</a>
+    </nav>
 
-<p id="paragraph">“ We deliver reliable solutions tailored to your needs — because your success is our priority.”</p>
-</div>
+    <p id="paragraph">“ We deliver reliable solutions tailored to your needs — because your success is our priority.”</p>
+  </div>
 
+  <div id="About" class="menu">
+    <button id="toggle">What do we do?</button>
+    <ul id="items">
+      <li>Identifies hay and silage farmers</li>
+      <li>Negotiates prices and contracts</li>
+      <li>Mobilizes equipment for harvesting & baling</li>
+      <li>Handles transportation of baled hay and silage</li>
+      <li>Stores products for future sales</li>
+      <li>Sells directly to buyers</li>
+    </ul>
+  </div>
 
+  <script>
+    const toggle = document.getElementById("toggle");
+    const menu = document.querySelector(".menu");
+    const items = document.querySelectorAll("#items li");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+
+      const radius = 200; // how far the items spread
+      const total = items.length;
+
+      items.forEach((item, index) => {
+        const angle = (index / total) * (2 * Math.PI); // radians
+        const x = radius * Math.cos(angle);
+        const y = radius * Math.sin(angle);
+
+        if (menu.classList.contains("active")) {
+          item.style.transform = `translate(${x}px, ${y}px)`;
+        } else {
+          item.style.transform = `translate(0,0)`;
+        }
+      });
+    });
+  </script>
+  <div id="#Contactus" class="contact">
+    
+
+  </div>
 </body>
 </html>
